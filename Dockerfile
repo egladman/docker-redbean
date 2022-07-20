@@ -13,7 +13,6 @@ RUN set -eux; \
         coreutils \
         git \
         make \
-        tree \
     ;
 
 
@@ -28,7 +27,6 @@ RUN set -eux; \
     git clone ${REDBEAN_GIT_PREFIX}/cosmopolitan $DESTDIR; \
     cd $DESTDIR; \
     git reset --hard $REDBEAN_GIT_COMMIT; \
-    tree .; \
     make -j${NPROC} MODE=tinylinux o/tinylinux/tool/net; \
     find . -name "*redbean*"
 
