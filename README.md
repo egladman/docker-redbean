@@ -1,15 +1,15 @@
 # [redbean](https://redbean.dev/)
 
-A tiny statically linked web browser.
+A tiny ~300KB statically linked web server with robust architecture support.
 
 ## Quickstart
 
-### ghcr.io
+### [ghcr.io](https://github.com/egladman/docker-redbean/pkgs/container/redbean)
 ```
 docker pull ghcr.io/egladman/redbean:latest
 ```
 
-### docker.io
+### [docker.io](https://hub.docker.com/r/egladman/redbean)
 ```
 docker pull docker.io/egladman/redbean:latest
 ```
