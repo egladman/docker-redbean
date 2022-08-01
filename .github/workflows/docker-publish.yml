@@ -45,8 +45,13 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
+        # If the max count is any higher the github runner will OOM
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+        with:
+          config-inline: |
+            [worker.oci]
+              max-parallelism = 2
 
       # https://github.com/docker/login-action
       - name: Log into registry ${{ matrix.registry }}
